@@ -1,0 +1,16 @@
+feature,importance
+Utilisation (Load/Capacity),0.13625075
+Trip Cost (IDR),0.10627726
+driver_hist_late_rate,0.08924611
+Load Carried (CBM),0.07612773
+dow,0.074343145
+fleet_hist_late_rate,0.07177708
+Drops on Trip,0.07176002
+Origin_Warehouse West,0.06904774
+departure_hour,0.06781473
+Origin_Warehouse North,0.067194216
+Origin_Warehouse East,0.06575455
+route_hist_late_rate,0.060174987
+Vehicle Capacity (CBM),0.04423168
+Fleet Type_Dedicated,0.0
+Fleet Type_On-Call,0.0

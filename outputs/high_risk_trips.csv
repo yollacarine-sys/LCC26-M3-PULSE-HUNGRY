@@ -1,0 +1,11 @@
+Trip ID,Fleet Type,Driver,Origin,Destination,Drops on Trip,Utilisation (Load/Capacity),Risk Probability,Risk Level
+TRIP-00242,Dedicated,Driver-21,Warehouse East,Outlet-053,7,0.677,0.8104127,CRITICAL
+TRIP-00230,Dedicated,Driver-23,Warehouse East,Outlet-021,7,0.76,0.75882083,HIGH
+TRIP-00254,Dedicated,Driver-23,Warehouse East,Outlet-022,8,0.728,0.7326478,HIGH
+TRIP-00254,Dedicated,Driver-23,Warehouse East,Outlet-032,8,0.728,0.72231305,HIGH
+TRIP-00242,Dedicated,Driver-21,Warehouse East,Outlet-073,7,0.677,0.71371424,HIGH
+TRIP-00213,Dedicated,Driver-22,Warehouse East,Outlet-046,8,0.821,0.6936277,HIGH
+TRIP-00230,Dedicated,Driver-23,Warehouse East,Outlet-055,7,0.76,0.68623716,HIGH
+TRIP-00251,Dedicated,Driver-03,Warehouse North,Outlet-057,6,0.687,0.67013645,HIGH
+TRIP-00213,Dedicated,Driver-22,Warehouse East,Outlet-031,8,0.821,0.6631504,HIGH
+TRIP-00210,On-Call,Driver-20,Warehouse East,Outlet-033,6,0.695,0.64316905,HIGH

@@ -1,0 +1,6 @@
+RootCause,Evidence,AffectedKPI,Severity,Confidence
+Route/Trip Efficiency (consolidation),"corr(drops/trip, utilisation)=0.72, p<0.001, n=271 trips","Dedicated Utilisation, Cost per Drop",High,High
+"Fleet Reliability (on-call cost add, not a fix)",OTD Dedicated=0.881 vs On-Call=0.71,"OTD, Transportation Cost",High,High
+Planning/Scheduling (consolidation collapse over time),Drops/trip fell 6.85 -> 5.41 across observed months,"Utilisation, On-Call Share, Cost",High,High
+Data Visibility/Forecasting,17.5% of legs unconfirmed (no real-time integration),OTD (measurement lag),Medium,High
+Driver Performance Variation,"OTD spread exists across drivers but is broad-based, not concentrated",OTD,Low-Medium,Medium

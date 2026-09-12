@@ -1,0 +1,5 @@
+Month,MonthLabel,OTD_pct,Dedicated_Utilisation_pct,OnCall_Share_pct,Avg_Drops_per_Trip,Total_Cost_IDR,Trips
+1,Month 1 (Jan/Baseline),92.3,82.5,6.7,6.85,25154000,60
+2,Month 2 (Feb),88.2,79.5,12.3,6.32,28536000,65
+3,Month 3 (Mar),82.3,75.0,15.7,5.87,31779000,70
+4,Month 4 (Apr/Current),78.8,69.2,21.1,5.41,35101000,76
