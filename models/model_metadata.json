@@ -1,0 +1,65 @@
+{
+  "model_name": "Hangry OTD Risk Model Suite (Logistic Regression scorer + XGBoost interpretability model)",
+  "model_files": {
+    "operational_scorer": "models/logistic_regression_otd_model.pkl",
+    "interpretability_model": "models/xgboost_otd_model.pkl",
+    "preprocessor": "models/preprocessor.pkl",
+    "feature_columns": "models/feature_columns.pkl"
+  },
+  "model_version": "1.0",
+  "dataset_file": "delivery_log_case_dataset_LCC2026.xlsx",
+  "training_period": "Month 1 (Jan/Baseline) -> Month 3 (Mar)",
+  "testing_period": "Month 4 (Apr/Current)",
+  "n_train": 1017,
+  "n_test": 339,
+  "target": "target_late (1=Late, 0=On-Time), derived from On-Time Flag",
+  "features_numeric": [
+    "departure_hour",
+    "dow",
+    "Drops on Trip",
+    "Vehicle Capacity (CBM)",
+    "Load Carried (CBM)",
+    "Utilisation (Load/Capacity)",
+    "Trip Cost (IDR)",
+    "driver_hist_late_rate",
+    "route_hist_late_rate",
+    "fleet_hist_late_rate"
+  ],
+  "features_categorical": [
+    "Origin",
+    "Fleet Type"
+  ],
+  "features_excluded_leakage": [
+    "Actual Arrival (time)",
+    "Reason Code",
+    "Delta (min)",
+    "On-Time Flag"
+  ],
+  "metrics": {
+    "Accuracy": 0.7109144542772862,
+    "Precision": 0.19047619047619047,
+    "Recall": 0.1111111111111111,
+    "F1": 0.14035087719298245,
+    "ROC_AUC": 0.4728464419475656
+  },
+  "baseline_metrics": {
+    "Accuracy": 0.5073746312684366,
+    "Precision": 0.25888324873096447,
+    "Recall": 0.7083333333333334,
+    "F1": 0.379182156133829,
+    "ROC_AUC": 0.6148044111527257
+  },
+  "preferred_model_summary": "Logistic Regression (for scoring) + XGBoost (for interpretability)",
+  "recommended_scoring_model": "Logistic Regression",
+  "risk_thresholds": {
+    "LOW": "<30%",
+    "MEDIUM": "30-60%",
+    "HIGH": "60-80%",
+    "CRITICAL": ">80%"
+  },
+  "limitations": [
+    "Hold-out test set covers a single month (~339 legs) \u2014 metrics are directionally indicative of feasibility, not production-grade validation.",
+    "Historical driver/route late-rate features have a cold-start problem for drivers/routes with little prior history (filled with the global late rate as a neutral default).",
+    "Model has no access to real-time traffic/weather/3PL operational status \u2014 it is decision support, not an autonomous ground-truth predictor."
+  ]
+}
